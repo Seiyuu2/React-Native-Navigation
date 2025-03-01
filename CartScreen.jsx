@@ -37,7 +37,7 @@ export default function CartScreen({ navigation }) {
         renderItem={({ item }) => (
           <View style={styles.cartItem}>
             <Text style={styles.productText}>
-              {item.name} - PHP {item.price} x {item.quantity}
+              {item.name} - ${item.price} x {item.quantity}
             </Text>
             <View style={styles.buttonsContainer}>
               <Button title="+" onPress={() => increaseQuantity(item)} />

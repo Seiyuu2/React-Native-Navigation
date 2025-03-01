@@ -24,7 +24,7 @@ export default function HomeScreen({ navigation }) {
         renderItem={({ item }) => (
           <View style={styles.productContainer}>
             <Text style={styles.productText}>
-              {item.name} - PHP {item.price}
+              {item.name} - ${item.price}
             </Text>
             <Button title="Add to Cart" onPress={() => addToCart(item)} />
           </View>

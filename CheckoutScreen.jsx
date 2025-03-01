@@ -27,13 +27,13 @@ export default function CheckoutScreen({ navigation }) {
         renderItem={({ item }) => (
           <View style={styles.checkoutItem}>
             <Text style={styles.productText}>
-              {item.name} - PHP {item.price} x {item.quantity}
+              {item.name} - ${item.price} x {item.quantity}
             </Text>
           </View>
         )}
         ListEmptyComponent={<Text>No items to checkout</Text>}
       />
-      <Text style={styles.totalText}>Total: PHP {totalPrice}</Text>
+      <Text style={styles.totalText}>Total: ${totalPrice}</Text>
       <TouchableOpacity style={styles.checkoutButton} onPress={handleCheckout}>
         <Text style={styles.checkoutButtonText}>Checkout</Text>
       </TouchableOpacity>
