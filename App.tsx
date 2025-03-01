@@ -1,12 +1,12 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { CartProvider } from './CartContext.jsx';
-import HomeScreen from './HomeScreen.jsx';
-import CartScreen from './CartScreen.jsx';
-import CheckoutScreen from './CheckoutScreen.jsx';
+import { createStackNavigator } from '@react-navigation/stack';
+import { CartProvider } from './CartContext';
+import HomeScreen from './HomeScreen';
+import CartScreen from './CartScreen';
+import CheckoutScreen from './CheckoutScreen';
 
-const Stack = createNativeStackNavigator();
+const Stack = createStackNavigator();
 
 export default function App() {
   return (
