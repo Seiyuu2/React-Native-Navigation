@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { View, Text, FlatList, TouchableOpacity, Alert, StyleSheet } from 'react-native';
-import { CartContext } from '../CartContext';
+import { CartContext } from './CartContext';
 
 export default function CheckoutScreen({ navigation }) {
   const { cartItems, setCartItems } = useContext(CartContext);
