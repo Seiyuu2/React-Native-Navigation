@@ -1,10 +1,10 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { CartProvider } from './CartContext.js';
-import HomeScreen from './HomeScreen.js';
-import CartScreen from './CartScreen.js';
-import CheckoutScreen from './CheckoutScreen.js';
+import { CartProvider } from './CartContext.jsx';
+import HomeScreen from './HomeScreen.jsx';
+import CartScreen from './CartScreen.jsx';
+import CheckoutScreen from './CheckoutScreen.jsx';
 
 const Stack = createStackNavigator();
 
