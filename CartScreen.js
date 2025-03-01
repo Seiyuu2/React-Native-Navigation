@@ -9,7 +9,7 @@ export default function CartScreen({ navigation }) {
   const renderItem = ({ item }) => (
     <View style={styles.itemContainer}>
       <Text style={styles.itemText}>
-        {item.name} - ${item.price} x {item.quantity} = ${item.totalPrice}
+        {item.name} - PHP{item.price} x {item.quantity} = PHP{item.totalPrice}
       </Text>
       <View style={styles.buttonContainer}>
         <Button title="+" onPress={() => updateQuantity(item.id, 1)} />
