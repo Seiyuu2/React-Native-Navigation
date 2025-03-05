@@ -6,11 +6,11 @@ import { CartContext } from './CartContext';
 // Sample product data with MTG-inspired names and images
 const products = [
   { id: '1', name: 'Sol Ring', price: 100, image: 'https://api.scryfall.com/cards/cm2/217?format=image&version=normal' },
-  { id: '2', name: 'Arcane Signet', price: 150, image: 'https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=476049&type=card' },
+  { id: '2', name: 'Arcane Signet', price: 150, image: 'https://cards.scryfall.io/png/front/1/8/1836b8a6-c616-4793-933b-b38296d70e72.png?1690002320' },
   { id: '3', name: 'Wheel of Fortune', price: 2200, image: 'https://www.mtgassist.com/card_scans/me4/Wheel-of-Fortune.jpg' },
   { id: '4', name: 'Black Lotus', price: 1000, image: 'https://cdn1.mtggoldfish.com/images/h/Black-Lotus-VMA-672.jpg' },
-  { id: '5', name: 'Mox Sapphire', price: 500, image: 'https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=633&type=card' },
-  { id: '6', name: 'Time Walk', price: 750, image: 'https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=728&type=card' },
+  { id: '5', name: 'Mox Sapphire', price: 500, image: 'https://cards.scryfall.io/large/front/e/a/ea1feac0-d3a7-45eb-9719-1cdaf51ea0b6.jpg?1614638862' },
+  { id: '6', name: 'Time Walk', price: 750, image: 'https://cards.scryfall.io/large/front/7/0/70901356-3266-4bd9-aacc-f06c27271de5.jpg?1614638832' },
 ];
 
 export default function HomeScreen({ navigation }) {
