@@ -9,36 +9,66 @@ export default function CheckoutScreen({ navigation }) {
   const totalPrice = cartItems.reduce((sum, item) => sum + item.totalPrice, 0);
 
   const handleCheckout = () => {
-    Alert.alert('Checkout', 'Checkout successful', [
-      {
-        text: 'OK',
-        onPress: () => {
-          clearCart();
-          navigation.navigate('Home');
+    Alert.alert(
+      'Checkout',
+      'Checkout successful',
+      [
+        {
+          text: 'OK',
+          onPress: () => {
+            clearCart();
+            navigation.navigate('Home');
+          },
         },
-      },
-    ]);
+      ],
+      { cancelable: false }
+    );
   };
 
   const renderItem = ({ item }) => (
     <View style={styles.itemContainer}>
-      <Text>
-        {item.name} - ${item.price} x {item.quantity} = ${item.totalPrice}
+      <Text style={styles.itemText}>
+        {item.name} - PHP{item.price} x {item.quantity} = PHP{item.totalPrice}
       </Text>
     </View>
   );
 
   return (
     <View style={styles.container}>
-      <FlatList data={cartItems} renderItem={renderItem} keyExtractor={(item) => item.id} />
-      <Text style={styles.totalText}>Total: ${totalPrice}</Text>
-      <Button title="Checkout" onPress={handleCheckout} />
+      <FlatList 
+        data={cartItems} 
+        renderItem={renderItem} 
+        keyExtractor={(item) => item.id} 
+      />
+      <Text style={styles.totalText}>Total: PHP{totalPrice}</Text>
+      <Button color="#b22222" title="Checkout" onPress={handleCheckout} />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, padding: 20 },
-  itemContainer: { marginBottom: 15, padding: 10, borderWidth: 1, borderColor: '#ccc' },
-  totalText: { fontSize: 18, fontWeight: 'bold', marginVertical: 20 },
+  container: { 
+    flex: 1, 
+    padding: 20,
+    backgroundColor: '#1a1a1a'
+  },
+  itemContainer: { 
+    marginBottom: 15, 
+    padding: 10, 
+    borderWidth: 1, 
+    borderColor: '#b22222', 
+    borderRadius: 8,
+    backgroundColor: '#2a2a2a'
+  },
+  itemText: { 
+    fontSize: 16, 
+    color: '#fff' 
+  },
+  totalText: { 
+    fontSize: 18, 
+    fontWeight: 'bold', 
+    marginVertical: 20, 
+    color: '#fff', 
+    textAlign: 'center' 
+  },
 });
